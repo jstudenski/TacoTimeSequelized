@@ -17,20 +17,11 @@ router.get('/', function (req, res) {
 // Index Page (render all burgers to DOM)
 router.get('/index', function (req, res) {
 
-console.log("world");
-
-  // Sequelize Query to get all burgers from database (and join them to their devourers, if applicable)
   models.tacos.findAll().then(function(data){
-    
-
     console.log(data.length);
-
     var object = { tacos: data };
     res.render("index", object);
-
   })
-
-
 
 });
 
@@ -50,9 +41,6 @@ router.post('/api/tacos', function (req, res) {
   });
 
 });
-
-
-
 
 
 

@@ -1,0 +1,54 @@
+<div id="left"></div>
+<div id="right"></div>
+<div id="bottom"></div>
+
+<header id="top">
+  <h2>TacoTime!</h2>
+  <form class="add-taco">
+    <button type="submit"><img src="/assets/img/taco.svg" width="35px"></img></button>
+    <div class="form-group">
+      <input type="text" id="name" name="name" placeholder="Add taco..." />
+    </div>
+  </form>
+</header>
+
+
+<nav class="cool-header">
+<div class="container">
+  <div class="panel">
+    <h3>Eat Me!</h3>
+  </div>
+  <div class="panel">
+    <h3>Tacos you've eaten!</h3>
+  </div>
+    </div>
+{{!--   <h3>Eat Me!</h3> --}}
+
+
+</nav>
+
+<main class="container">
+  
+  <div class="panel">
+
+
+
+    {{#each tacos}}
+      {{#unless eaten}}
+         {{> taco-item eaten=false}}
+      {{/unless}}
+    {{/each}}
+
+  </div>
+  <div class="panel">
+
+    {{#each tacos}}
+      {{#if eaten}}
+
+        {{> taco-item eaten=true}}
+      {{/if}}
+    {{/each}}
+
+  </div>
+
+</main>

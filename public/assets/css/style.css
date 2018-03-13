@@ -1,0 +1,143 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #c0dfcf; }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none; }
+
+#top, #bottom, #left, #right {
+  background: #ffffff;
+  position: fixed;
+  z-index: 2; }
+
+#left, #right {
+  top: 0;
+  bottom: 0;
+  width: 20px; }
+
+#left {
+  left: 0; }
+
+#right {
+  right: 0; }
+
+#top, #bottom {
+  left: 0;
+  right: 0; }
+
+#top {
+  top: 0;
+  height: 165px; }
+
+#bottom {
+  bottom: 0;
+  height: 20px; }
+
+.add-taco {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  width: 50%; }
+
+#name {
+  width: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 0.01em solid #d9d9d9;
+  border-right: 0;
+  height: 40px;
+  float: right;
+  font-size: 15px; }
+
+h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 55px;
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  color: #ff5252;
+  text-shadow: 1px 2px 0px #8b272d; }
+
+button[type=submit] {
+  background-color: #ff5252;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  float: right;
+  font-size: 15px; }
+  button[type=submit] p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+  button[type=submit]:hover {
+    background-color: #db3737; }
+
+.container {
+  width: calc(100% - 30px);
+  margin: 165px auto;
+  max-width: 750px; }
+
+.panel {
+  float: left;
+  width: 50%; }
+
+main .panel {
+  padding-bottom: 500px;
+  padding-top: 85px; }
+
+.panel-title {
+  width: 250px;
+  margin: 25px auto 8px auto;
+  font-size: 18px; }
+
+.taco {
+  background: #ffffff;
+  width: 250px;
+  margin: 8px auto;
+  height: 45px;
+  overflow: hidden; }
+
+.taco-title {
+  float: left;
+  padding-left: 16px;
+  font-size: 15px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.taco-button {
+  background: #3D5B82;
+  height: 100%;
+  width: 50px;
+  float: right;
+  font-size: 15px;
+  text-align: center;
+  color: #ffffff; }
+  .taco-button:hover {
+    background: #203c5c; }
+  .taco-button p, .taco-button .icon {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.cool-header {
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  background-color: #9eccb6;
+  height: 200px;
+  z-index: 1;
+  display: flex; }
+  .cool-header h3 {
+    align-self: flex-end;
+    width: 250px;
+    color: #404040;
+    font-size: 18px;
+    margin: 0px auto;
+    height: 35px;
+    box-sizing: border-box;
+    padding-top: 10px; }

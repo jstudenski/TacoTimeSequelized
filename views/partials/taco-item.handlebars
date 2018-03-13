@@ -1,0 +1,10 @@
+<div class="taco">
+  <div class="taco-title">
+  <p>{{this.taco_name}}</p>
+  </div>
+  {{#if eaten}}
+    <div data-id="{{this.id}}" class="taco-button deleteTaco"><div class="icon"><i class="far fa-trash-alt"></i></div></div>
+  {{else}}
+    <div data-id="{{this.id}}" class="taco-button eatTaco"><p>EAT</p></div>
+  {{/if}}
+</div>

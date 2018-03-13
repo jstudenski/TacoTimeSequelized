@@ -1,0 +1,181 @@
+$mint: #c0dfcf;
+$dark-mint: #9eccb6;
+$pink: #ffc3aa;
+$white: #ffffff;
+$light: #d9d9d9;
+$dark: #404040;
+$sunset: #ff5252;
+$sunset-dark: #8b272d;
+$punch: #db3737;
+$blue: #3D5B82;
+$blue-dark: #203c5c;
+
+
+$border-width: 20px;
+$border-top-height: 165px;
+
+$panel-item-width: 250px;
+
+//font
+$small: 15px; //11
+$medium: 18px;
+$logo: 55px;
+
+@mixin vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $mint;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+#top, #bottom, #left, #right {
+  background: $white;
+  position: fixed;
+  z-index: 2;
+}
+#left, #right {
+  top: 0; bottom: 0;
+  width: $border-width;
+}
+#left { left: 0;}
+#right { right: 0;}
+#top, #bottom { left: 0; right: 0;}
+#top { 
+  top: 0; 
+  height: $border-top-height;
+}
+#bottom { 
+  bottom: 0; 
+  height: $border-width;
+}
+
+.add-taco {
+  position: absolute;
+  bottom: 10px;
+  right: $border-width;
+  width: 50%;
+}
+
+#name {
+  width: 200px;
+  padding: $border-width;
+  box-sizing: border-box;
+  border: 0.01em solid $light;
+  border-right: 0;
+  height: 40px;
+  float: right;
+  font-size: $small;
+}
+
+h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: $logo;
+  position: absolute;
+  bottom: 5px;
+  left: $border-width;
+  color: $sunset;
+  text-shadow: 1px 2px 0px $sunset-dark;
+}
+
+
+button[type=submit] {
+  background-color: $sunset;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  float: right;
+  font-size: $small;
+  p {
+    @include vertical-center;
+  }
+  &:hover {
+    background-color: $punch;
+  }
+}
+
+.container {
+  width: calc(100% - 30px);
+  margin: 165px auto;
+  max-width: 750px;
+}
+
+.panel {
+  float: left;
+  width: 50%;
+}
+
+main .panel {
+  padding-bottom: 500px;
+  padding-top: 85px;
+}
+
+.panel-title {
+  width: $panel-item-width;
+  margin: 25px auto 8px auto;
+  font-size: $medium;
+}
+
+
+.taco {
+  background: $white;
+  width: $panel-item-width;
+  margin: 8px auto;
+  height: 45px;
+  overflow: hidden;
+}
+
+.taco-title {
+  float: left;
+  padding-left: 16px;
+  font-size: $small;
+  @include vertical-center;
+}
+
+.taco-button {
+  background: $blue;
+  height: 100%;
+  width: 50px;
+  float: right;
+  font-size: $small;
+  text-align: center;
+  color: #ffffff;
+  &:hover {
+    background: $blue-dark;
+  }
+  p, .icon {
+      @include vertical-center;
+  }
+}
+
+.cool-header {
+  width: 100%;
+  position:fixed;
+  top:50px;
+  background-color: $dark-mint;
+  height: 200px;
+  z-index: 1;
+  display: flex;
+  h3 {
+    align-self: flex-end;
+    width: $panel-item-width;
+    color: $dark;
+    font-size: $medium;
+      // background-color: salmon;
+    margin: 0px auto;
+    height: 35px;
+    box-sizing: border-box;
+    padding-top: 10px;
+  }
+}

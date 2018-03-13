@@ -5,6 +5,8 @@
   {{#if eaten}}
     <div data-id="{{this.id}}" class="taco-button deleteTaco"><div class="icon"><i class="far fa-trash-alt"></i></div></div>
   {{else}}
-    <div data-id="{{this.id}}" class="taco-button eatTaco"><p>EAT</p></div>
+ {{!--    <form action="taco/create" method="POST">  --}}
+      <div data-id="{{this.id}}" class="taco-button eatTaco"><p>EAT</p></div>
+    {{!-- </form> --}}
   {{/if}}
 </div>

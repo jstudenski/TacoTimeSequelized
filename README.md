@@ -1,6 +1,6 @@
-<img src="README-logo.svg" alt="alt text" width="250">
+<img src="README-logo.svg" alt="alt text" width="250"> (Sequelized)
 
-[Live Site](https://taco--time.herokuapp.com/)
+[Live Site](https://taco--time.herokuapp.com/) 
 
 
 This taco tool was built using  MySQL, Node, Express, Handlebars a homemade ORM and love. This MVC pattern app uses Node and MySQL to query and route data, and Handlebars as a templating engine.

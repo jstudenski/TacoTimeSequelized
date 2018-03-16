@@ -33,7 +33,7 @@
             <p>{{this.taco_name}}</p>
           </div>
           <div data-id="{{this.id}}" class="taco-button eatTaco"><p>EAT</p></div>
-          <div class="form-group">
+          <div class="customer-form">
             <input type="text" id="customer" name="name" placeholder="Customer" />
           </div>
         </div>
@@ -48,7 +48,14 @@
           <div class="taco-title">
             <p>{{this.taco_name}}</p>
           </div>
-          <div data-id="{{this.id}}" class="taco-button deleteTaco"><div class="icon"><i class="far fa-trash-alt"></i></div></div>
+
+          
+
+          <div data-id="{{this.id}}" class="taco-button deleteTaco">
+            <div class="icon"><i class="far fa-trash-alt"></i></div>
+          </div>
+          <div class="customer-display"></div>
+
         </div>
       {{/if}}
     {{/each}}

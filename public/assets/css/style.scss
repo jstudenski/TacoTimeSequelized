@@ -7,6 +7,9 @@ $dark: #404040;
 $sunset: #ff5252;
 $sunset-dark: #8b272d;
 $punch: #db3737;
+
+
+$sky: #579BA8;
 $blue: #3D5B82;
 $blue-dark: #203c5c;
 
@@ -14,7 +17,7 @@ $blue-dark: #203c5c;
 $border-width: 20px;
 $border-top-height: 165px;
 
-$panel-item-width: 250px;
+$panel-item-width: 350px;
 
 //font
 $small: 15px; //11
@@ -69,15 +72,43 @@ button:focus {
 
 #customer {
   width: 100px;
-//  padding: $border-width;
+  padding-left: 12px;
   box-sizing: border-box;
-border: none;
+  border: none;
   border-right: 0;
   height: 45px;
   float: right;
   font-size: $small;
+  //background-color: $sky;
+  border: 2px solid  $sky;
+  &::-webkit-input-placeholder {color: $light;}
+  &:-moz-placeholder {color: $light;}
+  &::-moz-placeholder {color: $light;}
+  &:-ms-input-placeholder {color: $light;}
+
 }
 
+
+// .customer-form input {
+//   color: $white;
+// 
+
+.customer-display {
+  background-color: $sky;
+  width: 100px;
+  padding-left: 12px;
+  box-sizing: border-box;
+  border: none;
+  border-right: 0;
+  height: 45px;
+  float: right;
+  font-size: $small;
+
+  color: #fff;
+  padding-top: 15px;
+
+
+}
 
 #name {
   width: 200px;

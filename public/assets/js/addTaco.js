@@ -1,25 +1,22 @@
-
-
-
 $(".add-taco").on("submit", function(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    var taco = {
-      name: $("#name").val().trim()
-    };
-    
-    // Send the POST request.
-    $.ajax("/api/tacos", {
-      type: "POST",
-      data: taco
-    }).then(
-      function() {
-        console.log("added new taco");
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
+  var taco = {
+    name: $("#name").val().trim()
+  };
+  
+  // Send the POST request.
+  $.ajax("/api/tacos", {
+    type: "POST",
+    data: taco
+  }).then(
+    function() {
+      console.log("added new taco");
+      // Reload the page to get the updated list
+      location.reload();
+    }
+  );
+});
 
   $(".eatTaco").on("click", function(event) {
     var id = $(this).data("id");
@@ -28,6 +25,7 @@ $(".add-taco").on("submit", function(event) {
       eaten: 1
     };
 
+    console.log(id);
     // Send the DELETE request.
     $.ajax("/api/tacos/" + id, {
       type: "PUT",

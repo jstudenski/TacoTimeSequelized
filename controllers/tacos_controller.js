@@ -43,37 +43,26 @@ router.put("/api/tacos/:id", function(req, res) {
   models.Customer.create({
     name: req.body.myname //req.body.burgerEater
     //burgerId: req.params.id
-  })
-
-
-  // Create a new customer 
-  // models.Customer.create({
-  //   name: req.body.name
-  //  // TacoId: req.params.id
-  // })
-
-    // console.log(req.body);
-    // models.Customer.create(req.body).then(function(dbAuthor) {
-    //   res.json(dbAuthor);
-    // });
-
-
-  // models.Customer.create({
-  //   name: req.body.name
-  // }).then(function(dbPost){
-  //   res.json(dbPost);
-  // });
-
-
-  models.tacos.update({
-    eaten: "1" 
-  },{
-    where: {
-      id: req.params.id
-    }
   }).then(function(dbPost) {
-    res.json(dbPost)
-  })
+     
+
+      models.tacos.update({
+        eaten: "1",
+        CustomerId: dbPost.id
+      },{
+        where: {
+          id: req.params.id
+        }
+      }).then(function(dbPost) {
+        res.json(dbPost)
+      })
+
+
+
+  });
+
+
+
 });
 
 // DELETE

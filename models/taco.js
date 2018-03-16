@@ -13,5 +13,17 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: false
     }
   });
+
+  tacos.associate = function(models) {
+
+    tacos.belongsTo(models.Customer, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
+
+
   return tacos;
 };

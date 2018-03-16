@@ -67,6 +67,18 @@ button:focus {
   width: 50%;
 }
 
+#customer {
+  width: 100px;
+//  padding: $border-width;
+  box-sizing: border-box;
+border: none;
+  border-right: 0;
+  height: 45px;
+  float: right;
+  font-size: $small;
+}
+
+
 #name {
   width: 200px;
   padding: $border-width;

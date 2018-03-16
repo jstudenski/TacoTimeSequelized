@@ -41,23 +41,17 @@ router.put("/api/tacos/:id", function(req, res) {
     name: req.body.myname
     //tacoId: req.params.id // not used
   }).then(function(dbPost) {
-     
-
-      models.tacos.update({
-        eaten: "1",
-        CustomerId: dbPost.id
-      },{
-        where: {
-          id: req.params.id
-        }
-      }).then(function(dbPost) {
-        res.json(dbPost)
-      })
-
+    models.tacos.update({
+      eaten: "1",
+      CustomerId: dbPost.id
+    },{
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbPost) {
+      res.json(dbPost)
+    })
   });
-
-
-
 });
 
 // DELETE

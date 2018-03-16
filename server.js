@@ -26,6 +26,8 @@ app.use('/', router);
 
 // Start Server
 var PORT = process.env.PORT || 3000;
-app.listen(PORT, function() {
-  console.log("App now listening at localhost:" + PORT);
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("App now listening at localhost:" + PORT);
+  });
 });

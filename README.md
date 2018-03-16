@@ -1,4 +1,4 @@
-<img src="README-logo.svg" alt="alt text" width="250"> (Sequelized)
+<img src="README-logo.svg" alt="alt text" width="300">
 
 [Live Site](https://taco--time.herokuapp.com/) 
 

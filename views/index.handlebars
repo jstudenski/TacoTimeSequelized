@@ -18,7 +18,7 @@
       <h3>Eat Me!</h3>
     </div>
     <div class="panel">
-      <h3>Tacos you've eaten!</h3>
+      <h3>Tacos eaten!</h3>
     </div>
   </div>
 </nav>
@@ -34,7 +34,7 @@
           </div>
           <div data-id="{{this.id}}" class="taco-button eatTaco"><p>EAT</p></div>
           <div class="customer-form">
-            <input type="text" id="customer" name="name" placeholder="Customer" />
+            <input type="text" id="customer" name="customer" placeholder="Customer" />
           </div>
         </div>
       {{/unless}}
@@ -54,7 +54,7 @@
           <div data-id="{{this.id}}" class="taco-button deleteTaco">
             <div class="icon"><i class="far fa-trash-alt"></i></div>
           </div>
-          <div class="customer-display"></div>
+          <div class="customer-display">{{this.Customer.name}}</div>
 
         </div>
       {{/if}}

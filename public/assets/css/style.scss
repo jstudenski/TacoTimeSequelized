@@ -81,6 +81,7 @@ button:focus {
   font-size: $small;
   //background-color: $sky;
   border: 2px solid  $sky;
+  border-right: 0px;
   &::-webkit-input-placeholder {color: $light;}
   &:-moz-placeholder {color: $light;}
   &::-moz-placeholder {color: $light;}
@@ -106,7 +107,7 @@ button:focus {
 
   color: #fff;
   padding-top: 15px;
-
+  
 
 }
 

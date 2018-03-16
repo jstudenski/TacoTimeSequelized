@@ -16,8 +16,10 @@ router.get('/', function (req, res) {
 
 // RENDER
 router.get('/index', function (req, res) {
-  models.tacos.findAll().then(function(data){
-    console.log(data.length);
+  models.tacos.findAll({
+   include: [{model: models.Customer}]
+  }).then(function(data){
+   // console.log(data.length);
     var object = { tacos: data };
     res.render("index", object);
   })
@@ -32,8 +34,37 @@ router.post('/api/tacos', function (req, res) {
   });
 });
 
-// UPDATE
+// EAT
 router.put("/api/tacos/:id", function(req, res) {
+  console.log("-----");
+  console.log(req.body.myname);
+//  console.log(req.params.customer);
+
+  models.Customer.create({
+    name: req.body.myname //req.body.burgerEater
+    //burgerId: req.params.id
+  })
+
+
+  // Create a new customer 
+  // models.Customer.create({
+  //   name: req.body.name
+  //  // TacoId: req.params.id
+  // })
+
+    // console.log(req.body);
+    // models.Customer.create(req.body).then(function(dbAuthor) {
+    //   res.json(dbAuthor);
+    // });
+
+
+  // models.Customer.create({
+  //   name: req.body.name
+  // }).then(function(dbPost){
+  //   res.json(dbPost);
+  // });
+
+
   models.tacos.update({
     eaten: "1" 
   },{

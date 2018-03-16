@@ -13,10 +13,16 @@ $(".add-taco").on("submit", function(event) {
 
 $(".eatTaco").on("click", function(event) {
   var id = $(this).data("id");
+  var customer = $("#customer").val().trim();
+
   // Send the DELETE request.
   $.ajax("/api/tacos/" + id, {
     type: "PUT",
-    data: { eaten: 1 }
+    data: { 
+      eaten: 1,
+      myname: customer
+    },
+
   }).then(
     function() {
       location.reload();

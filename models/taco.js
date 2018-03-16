@@ -17,12 +17,12 @@ module.exports = function(sequelize, DataTypes) {
   tacos.associate = function(models) {
 
     tacos.belongsTo(models.Customer, {
+      onDelete: "CASCADE", // not functioning as expected
       foreignKey: {
         allowNull: false
       }
     });
   };
-
 
 
   return tacos;

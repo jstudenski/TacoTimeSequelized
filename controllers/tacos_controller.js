@@ -1,7 +1,7 @@
 // Node Dependencies
 var express = require('express');
 var router = express.Router();
-var models = require('../models'); // Pulls out the Burger Models
+var models = require('../models');
 
 // Extracts the sequelize connection from the models object
 var sequelizeConnection = models.sequelize;
@@ -36,13 +36,10 @@ router.post('/api/tacos', function (req, res) {
 
 // EAT
 router.put("/api/tacos/:id", function(req, res) {
-  console.log("-----");
-  console.log(req.body.myname);
-//  console.log(req.params.customer);
 
   models.Customer.create({
-    name: req.body.myname //req.body.burgerEater
-    //burgerId: req.params.id
+    name: req.body.myname
+    //tacoId: req.params.id // not used
   }).then(function(dbPost) {
      
 
@@ -56,8 +53,6 @@ router.put("/api/tacos/:id", function(req, res) {
       }).then(function(dbPost) {
         res.json(dbPost)
       })
-
-
 
   });
 

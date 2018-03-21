@@ -15,7 +15,6 @@ $(".eatTaco").on("click", function(event) {
   var id = $(this).data("id");
   var customer = $("#customer").val().trim();
 
-  // Send the DELETE request.
   $.ajax("/api/tacos/" + id, {
     type: "PUT",
     data: { 
